@@ -157,7 +157,7 @@ function stack() {
         sectionNext = d3.select(section[0][i1 + 1]).interrupt().style("display", "block").style("opacity", 0).style("z-index", 0);
       } else if (i1 === i - 1) { // rewind one
         sectionNext.interrupt().style("display", "none").style("opacity", 0).style("z-index", 0).each(deactivate);
-        sectionNext = sectionCurrent.interrupt().style("opacity", 1).style("z-index", 1);
+        sectionNext = sectionCurrent.interrupt().style("opacity", 0).style("z-index", 0);
         sectionNext.transition().each("end", deactivate);
         sectionCurrent = sectionPrevious.interrupt().style("opacity", 0).style("z-index", 2).each(activate);
         sectionCurrent.transition().style("opacity", 1);
