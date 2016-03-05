@@ -33,7 +33,7 @@ function stack() {
         .each(resize);
   } else {
     var background = d3.select("body").insert("div", "section")
-        .style("background", "#000")
+        .style("background", "#fff")
         .style("box-shadow", "0 8px 16px rgba(0,0,0,.3)")
         .style("padding", "1px 0")
         .style("margin-top", "-1px")
